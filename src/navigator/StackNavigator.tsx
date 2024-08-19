@@ -1,6 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { LoginScreen } from '../screens/LoginScreen';
-import { PRIMARY_COLOR } from '../commons/constants';
+
 import { RegisterScreen } from '../screens/RegisterScreen';
 import { useState } from 'react';
 import { HomeScreen } from '../screens/HomeScreen/HomeScreen';
@@ -15,22 +15,20 @@ export interface User {
 const Stack = createStackNavigator();
 
 export const StackNavigator = () => {
-    //arreglo de usuarios para el inicio de sesión
+    
     const users: User[] = [
-        { id: 1, email: 'vflores@gmail.com', password: '123455' },
-        { id: 2, email: 'caguas@gmail.com', password: '1234567' },
-        { id: 3, email: 'gabriel@gmail.com', password: '1234' },
-        { id: 4, email: 'cristian@gmail.com', password: '4567' },
-        { id: 5, email: 'jose@gmail.com', password: '7890' },
+        
+        { id: 1, email: 'gabriel@gmail.com', password: '1234' },
+        { id: 2, email: 'cristian@gmail.com', password: '4567' },
+        { id: 3, email: 'jose@gmail.com', password: '7890' },
     ];
 
-    //hook useState: manipulación del arreglo con la lista de usuarios
+    
     const [listUsers, setListUsers] = useState(users);
 
-    //función permite añadir nuevos usuarios al arreglo
+    
     const handleAddUser = (user: User) => {
-        //añadir nuevos elementos en el listUsers
-        //operador propagación ...: crear una copia del arreglo
+        
         setListUsers([...listUsers, user]);
     }
 

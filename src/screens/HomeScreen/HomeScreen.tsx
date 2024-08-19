@@ -5,7 +5,7 @@ import { BodyComponent } from '../../components/BodyComponent';
 import { CardProduct } from './components/CardProduct';
 
 
-//interface - arreglo productos
+
 export interface Product {
     id: number;
     name: string;
@@ -15,7 +15,7 @@ export interface Product {
 }
 
 export const HomeScreen = () => {
-    //arreglo de productos
+    
     const products: Product[] = [
         {id:1, name:"Camiseta", price:15.50, stock:10, pathImage:"https://gasoilonline.com/193-home_default/camiseta-azul-100-algodon.jpg"},
         {id:2, name:"Camisa", price:20.50, stock:5, pathImage:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYF9jT7HkbAi5YNdtH8Cb9KtwG320TyqZL3g&s"},
